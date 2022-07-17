@@ -10,36 +10,37 @@
     <style>
         section{
             height : 100vh ;
-            background-color: rgb(53, 1, 1);
-            color: white;
+            background-color: rgb(53, 1, 46);
+            color: rgb(236, 159, 192);
             text-align: center;
             padding-top: 100px;
         }
         .random{
             padding: 32px 150px;
-            color: crimson ;
-            background-color:  rgb(236, 180, 159);
+            color: rgb(53, 1, 46); ;
+            background-color:  rgb(236, 159, 192);
             border-radius: 20px;
+            font-size: 25px;
         }
     </style>
 
     <section>
-        <h1>Code Generator</h1>
+        <h1><b>Code Generator</b></h1>
         <br><br><br>
         <span class="random"></span>
     </section>
 
     <script>
-        ran = document.querySelector('.random')
-        function generate(len) {
-            var random = '';
-            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-            for (var i, i=0; i<len; i++) {
-                random += characters.charAt(Math.floor(Math.random()*len))
+
+        function generator() {
+            display = '';
+            pickfrom = 'ABCDE12345@#$*&';
+            for (var i, i = 0; i < pickfrom.length; i++) {
+                display += pickfrom.charAt(Math.floor(Math.random()*pickfrom.length))                
             }
-            ran.innerHTML = 'OPP' + random ;
+            document.querySelector('.random').innerHTML = display
         }
-        generate(6)
+        generator()
     </script>
 
 
